@@ -5,14 +5,14 @@ Installation
 ====
 
 ```
-    composer require sc/complex-base 0.*
+    composer require scorpiot1000/complex-base 0.*
 ```
 
 Usage
 ====
 
 ```php
-    use Sc\ComplexBase\Complex;
+    use ScorpioT1000\ComplexBase\Complex;
     
     ...
 
