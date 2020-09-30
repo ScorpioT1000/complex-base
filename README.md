@@ -12,8 +12,12 @@ Usage
 ====
 
 ```php
+    use Sc\ComplexBase\Complex;
+    
+    ...
+
     $a = new Complex(4, 4);
-    $b = new Comples(2, 2);
+    $b = new Complex(2, 2);
     
     echo 'a = '. $a . PHP_EOL;
     echo 'b = '. $b . PHP_EOL;
