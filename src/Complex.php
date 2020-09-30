@@ -1,7 +1,7 @@
 <?php
-namespace Sc\ComplexBase;
+namespace ScorpioT1000\ComplexBase;
 
-use Sc\ComplexBase\Exceptions\ComplexDivisionByZeroException;
+use ScorpioT1000\ComplexBase\Exceptions\ComplexDivisionByZeroException;
 
 /**
  * Implements complex numbers base math methods

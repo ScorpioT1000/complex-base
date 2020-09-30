@@ -1,8 +1,8 @@
 <?php
-namespace Sc\ComplexBase\Tests;
+namespace ScorpioT1000\ComplexBase\Tests;
 
-use Sc\ComplexBase\Complex;
-use Sc\ComplexBase\Exceptions\ComplexDivisionByZeroException;
+use ScorpioT1000\ComplexBase\Complex;
+use ScorpioT1000\ComplexBase\Exceptions\ComplexDivisionByZeroException;
 use PHPUnit\Framework\TestCase;
 
 final class ComplexTest extends TestCase

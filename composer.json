@@ -1,5 +1,5 @@
 {
-    "name": "sc/complex-base",
+    "name": "scorpiot1000/complex-base",
     "type": "library",
     "description": "Complex numbers base operations",
     "keywords": ["math"],
@@ -13,10 +13,10 @@
         }
     ],
     "autoload": {
-        "psr-4": { "Sc\\ComplexBase\\": "src/" }
+        "psr-4": { "ScorpioT1000\\ComplexBase\\": "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "Sc\\ComplexBase\\Tests\\": "tests/" }
+        "psr-4": { "ScorpioT1000\\ComplexBase\\Tests\\": "tests/" }
     },
     "require": {
         "php": ">=7.1.0"
