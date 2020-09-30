@@ -1,7 +1,15 @@
 # complex-base
 Complex numbers base operations
 
-**Usage:**
+Installation
+====
+
+```
+    composer require sc/complex-base 0.*
+```
+
+Usage
+====
 
 ```php
     $a = new Complex(4, 4);
@@ -15,4 +23,11 @@ Complex numbers base operations
     echo 'a - b = '.$a->sub($b) . PHP_EOL;
     echo 'a * b = '.$a->mul($b) . PHP_EOL;
     echo 'a / b = '.$a->div($b) . PHP_EOL;
+```
+
+Run tests
+====
+
+```
+    phpunit ./tests
 ```

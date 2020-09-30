@@ -1,5 +1,5 @@
 <?php
-namespace Sc\ComplexBase\Exception;
+namespace Sc\ComplexBase\Exceptions;
 
 class ComplexException extends \Exception
 {    
