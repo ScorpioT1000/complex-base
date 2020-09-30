@@ -5,7 +5,7 @@ Installation
 ====
 
 ```
-    composer require scorpiot1000/complex-base 0.*
+    composer require scorpiot1000/complex-base 0.*@dev
 ```
 
 Usage
