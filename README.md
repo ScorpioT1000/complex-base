@@ -12,7 +12,8 @@ Usage
 ====
 
 ```php
-    use ScorpioT1000\ComplexBase\Complex;
+    use ScorpioT1000\ComplexBase\Complex\Form\Complex;
+    use ScorpioT1000\ComplexBase\Complex\Form\ComplexTrigonometric;
     
     ...
 
@@ -27,11 +28,14 @@ Usage
     echo 'a - b = '.$a->sub($b) . PHP_EOL;
     echo 'a * b = '.$a->mul($b) . PHP_EOL;
     echo 'a / b = '.$a->div($b) . PHP_EOL;
+
+    $aTrig = $a->toTrigonometric();
+
+    echo $aTrig;
+    echo $aTrig->add(new ComplexTrigonometric(0, M_PI)); // rotate 180deg
 ```
 
 Run tests
 ====
 
-```
-    phpunit ./tests
-```
+Just execute `phpunit` binary from the document root

@@ -1,7 +1,7 @@
 <?php
 namespace ScorpioT1000\ComplexBase\Tests;
 
-use ScorpioT1000\ComplexBase\Complex;
+use ScorpioT1000\ComplexBase\Form\Complex;
 use ScorpioT1000\ComplexBase\Exceptions\ComplexDivisionByZeroException;
 use PHPUnit\Framework\TestCase;
 
