@@ -14,24 +14,24 @@ final class ComplexTrigonometricTest extends TestCase
         $this->assertSame($c11->getMagnitude(), 1.0);
         $this->assertSame($c11->getAngle(), 1.0); 
 
-        $c1pi10 = new ComplexTrigonometric(1.0, M_PI*7);
-        $this->assertSame($c1pi10->getAngle(), M_PI); 
+        $c1pi7 = new ComplexTrigonometric(1.0, M_PI*7);
+        $this->assertSame($c1pi7->getAngle(), M_PI); 
 
-        $c1mpi10 = new ComplexTrigonometric(1.0, -M_PI); // angle normalization
-        $this->assertSame($c1mpi10->getAngle(), M_PI); 
+        $c1mpi = new ComplexTrigonometric(1.0, -M_PI); // angle normalization
+        $this->assertSame($c1mpi->getAngle(), M_PI); 
     }
 
     public function testConversion()
     {
         $t = new ComplexTrigonometric(1.0, 1.0);
         $r = $t->toRectangular()->toTrigonometric();
-        $this->assertSame($t->getMagnitude(), $r->getMagnitude()); 
-        $this->assertSame($t->getAngle(), $r->getAngle());
+        $this->assertEquals($t->getMagnitude(), $r->getMagnitude(), '', 0.000000001); 
+        $this->assertEquals($t->getAngle(), $r->getAngle(), '', 0.000000001);
 
         $t = new ComplexTrigonometric(1.0, -1.0);
         $r = $t->toRectangular()->toTrigonometric();
-        $this->assertSame($t->getMagnitude(), $r->getMagnitude()); 
-        $this->assertSame($t->getAngle(), $r->getAngle());
+        $this->assertEquals($t->getMagnitude(), $r->getMagnitude(), '', 0.000000001); 
+        $this->assertEquals($t->getAngle(), $r->getAngle(), '', 0.000000001);
 
         $t = new ComplexTrigonometric(-500.0, 6.0);
         $r = $t->toRectangular()->toTrigonometric();
@@ -40,11 +40,11 @@ final class ComplexTrigonometricTest extends TestCase
 
         // cross-conversion per component
         $r1 = new Complex(1.0, 1.0);
-        $r2 = $r->toRectangular();
-        $this->assertEquals($r1->getMagnitude(), $r1->getMagnitude(), '', 0.000000001); 
-        $this->assertEquals($r1->getAngle(), $r1->getAngle(), '', 0.000000001);
-        $this->assertEquals($r1->getReal(), $r1->getReal(), '', 0.000000001); 
-        $this->assertEquals($r1->getImaginary(), $r1->getImaginary(), '', 0.000000001);
+        $r2 = $r1->toRectangular();
+        $this->assertEquals($r1->getMagnitude(), $r2->getMagnitude(), '', 0.000000001); 
+        $this->assertEquals($r1->getAngle(), $r2->getAngle(), '', 0.000000001);
+        $this->assertEquals($r1->getReal(), $r2->getReal(), '', 0.000000001); 
+        $this->assertEquals($r1->getImaginary(), $r2->getImaginary(), '', 0.000000001);
     }
     
     public function testArithmetic()
